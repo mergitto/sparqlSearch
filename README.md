@@ -1,7 +1,7 @@
 ##SPARQLを使ってデータの可視化をします
 SPARQLのendopointに対してqueryを送りデータを受け取る
 ##手順
-1.search.htmlを開き、好きなワードを選択  
+1.search.htmlを開き、好きなワードを選択  
 2.検索  
 ##流れ
 1.search.htmlの選択肢が変更されたときにSPARQLのendopointに対してqueryを送る  
