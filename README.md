@@ -1,2 +1,10 @@
-# sparqlSearch
-javascriptを使ってSPARQL
+#SPARQLを使ってデータの可視化をします
+SPARQLのendopointに対してqueryを送りデータを受け取る
+#手順
+1.search.htmlでワードを選択
+2.検索
+#流れ
+1.search.htmlの選択肢が変更されたときにSPARQLのendopointに対してqueryを送る
+2.結果をjson形式で受け取る
+3.json形式のデータを配列にして、GoogleMapsAPIで使える形に変更
+4.データを日本地図で可視化
