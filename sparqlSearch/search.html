@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" />
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="./sparqlSearch.js"></script>
+    <title>Google Visualization API Sample</title> 
+  </head>
+  <body>
+  <div class="container">
+    <div id="query">
+      <h1>日本に関する統計データ</h1>
+      <form class="form-inline">
+        <label>SPARQL endpoint:</label>
+        <div class="input-append">
+          <!-- SPARQL エンドポイントの指定 -->
+          <input id="endpoint" class="span6" value="http://ja.dbpedia.org/sparql" type="text">
+          <!-- ボタンクリック時に上で定義した query() 関数を呼び出す -->
+          <button class="btn" type="button" onclick="query()">検索</button>
+        </div>
+      </form>
+      <label>好きなワードを選択して検索ボタンを押してください</label>
+      <select name="name" id="words">
+        <option value="Artist">Artist:アーティスト</option>
+        <option value="Writer">Writer:作家</option>
+        <option value="ComicsCreator">ComicsCreator:漫画家</option>
+        <option value="Athlete">Athlete:アスリート</option>
+        <option value="Wrestler">Wrestler:レスラー</option>
+        <option value="Model">Model:モデル</option>
+        <option value="Scientist">Scientist:科学者</option>
+        <option value="SoccerPlayer">SoccerPlayer:サッカー選手</option>
+        <option value="Actor">Actor:俳優</option>
+        <option value="VoiceActor">VoiceActor:声優</option>
+        <option value="Presenter">Presenter:演者</option>
+        <option value="FigureSkater">FigureSkater:フィギュアスケート選手</option>
+        <option value="BaseballPlayer">BaseballPlayer:野球選手</option>
+        <option value="Architect">Architect:建築家</option>
+        <option value="Comedian">Comedian:お笑い芸人</option>
+        <option value="MusicalArtist">MusicalArtist:ミュージシャン</option>
+        <option value="Philosopher">Philosopher:哲学者</option>
+        <option value="Royalty">Royalty:皇族</option>
+      </select>
+    </div>
+    <!-- 結果を表示用 -->
+    <div class="console" style="display: none;">　SPARQL Query 実行結果:(consoleにはqueryや取り出したデータを表示してます。)</div>
+    <div id="geomap"></div> 
+    <div id="result"></div>
+  </div>
+  <script>
+    $(function(){
+      $('.btn').click(function(){
+        $('.console').fadeIn(); //実行結果文表示
+      });
+    });
+  </script>
+  </body>
+</html>
